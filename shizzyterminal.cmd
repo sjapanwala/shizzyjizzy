@@ -10,7 +10,7 @@ echo [40;35m│___/_│ │_│_/___/___│\__, │[40;36m/ │_/___/___│\__
 echo [40;35m                     │___/[40;36m__/           │___/ 
 echo [40;35m                            Loading Terminal...
 pause
-
+echo hello
 
 
 rem start loading section
