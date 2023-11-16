@@ -220,11 +220,31 @@ chcp 65001
 mode 120,35
 cls
 echo.
-echo  ______     __  __     __     ______     ______     __  __     ______   ______     ______     __    __    
-echo /\  ___\   /\ \_\ \   /\ \   /\___  \   /\___  \   /\ \_\ \   /\__  _\ /\  ___\   /\  == \   /\ '- ./  \     
-echo \ \___  \  \ \  __ \  \ \ \  \/_/  /__  \/_/  /__  \ \____ \  \/_/\ \/ \ \  __\   \ \  __(   \ \ \-./\ \  
-echo  \/\_____\  \ \_\ \_\  \ \_\   /\_____\   /\_____\  \/\_____\    \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \ \_\ 
-echo   \/_____/   \/_/\/_/   \/_/   \/_____/   \/_____/   \/_____/     \/_/   \/_____/   \/_/ /_/   \/_/  \/_/ 
-echo.                                                                                                         
+echo %termcolour%  ______     __  __     __     ______     ______     __  __   [40;36m   ______   ______     ______     __    __     [40;37m│ 
+echo %termcolour% /\  ___\   /\ \_\ \   /\ \   /\___  \   /\___  \   /\ \_\ \  [40;36m  /\__  _\ /\  ___\   /\  == \   /\ '-./  \    [40;37m│ 
+echo %termcolour% \ \___  \  \ \  __ \  \ \ \  \/_/  /__  \/_/  /__  \ \____ \ [40;36m  \/_/\ \/ \ \  __\   \ \  __(   \ \ \-./\ \   [40;37m│ 
+echo %termcolour%  \/\_____\  \ \_\ \_\  \ \_\   /\_____\   /\_____\  \/\_____\[40;36m     \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \ \_\  [40;37m│ 
+echo %termcolour%   \/_____/   \/_/\/_/   \/_/   \/_____/   \/_____/   \/_____/[40;36m      \/_/   \/_____/   \/_/ /_/   \/_/  \/_/  [40;37m│  
+echo.                                                                                                   
+echo For Help With Commands Type "!help"                                                                              
+echo. 
+:commandline                                                                                                        
+set /p commandline=[40;37m[[40;32m%username%[40;37m][40;31m➥[40;33m
 
-pause
+rem commandline commands
+
+if %commandline%==help goto help
+
+
+
+
+rem command descriptiuons
+
+:help
+echo.
+echo [40;37mWelcome To Help.
+echo.
+echo [40;33m!help - Brings Up The Help menu
+echo [40;33m!(command)-help - Brings Up Help For The Specific Command 
+echo.
+goto commandline
